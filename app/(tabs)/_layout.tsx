@@ -1,12 +1,16 @@
+import { COLORS } from "@/constants/color";
 import { Tabs } from "expo-router";
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#000",
-        tabBarInactiveTintColor: "#bfb9b9",
+        tabBarActiveTintColor: "#fff",
         headerShown: false,
+        tabBarStyle: {
+          backgroundColor: COLORS.one,
+          borderColor: COLORS.one,
+        },
       }}
     >
       <Tabs.Screen
@@ -15,7 +19,6 @@ export default function TabLayout() {
           title: "Home",
           tabBarLabelStyle: {
             fontFamily: "SpaceMono",
-            color: "#bfb9b9",
             fontSize: 12,
           },
         }}

@@ -3,13 +3,16 @@ module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
-     fontFamily: {
-        Regular: ["SpaceMono"],
+    fontFamily: {
+      flight: ["light"],
+      fbold: ["bold"],
     },
-    colors:{
-      primary: "#F1F8FE"
-    }
-
+    colors: {
+      one: "#204078",
+      two: "#FD6968",
+      three: "#6879E2",
+      four: "#2D3F52",
+    },
   },
   plugins: [],
 };
