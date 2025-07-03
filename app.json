@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "application-name",
-    "slug": "application-name",
+    "name": "focus-timer",
+    "slug": "focus-timer",
     "version": "1.0.0",
     "orientation": "portrait",
-    "scheme": "application-name",
+    "scheme": "focus-timer",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
