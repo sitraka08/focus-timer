@@ -5,7 +5,6 @@ import { Text, View } from "react-native";
 
 import "react-native-reanimated";
 import "../global.css";
-import { COLORS } from "@/constants/color";
 
 (Text as any).defaultProps = (Text as any).defaultProps || {};
 (Text as any).defaultProps.allowFontScaling = false;
@@ -25,9 +24,11 @@ export default function RootLayout() {
       <View className="!bg-one w-full h-12">
         <StatusBar style="light" />
       </View>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      ></Stack>
     </>
   );
 }
