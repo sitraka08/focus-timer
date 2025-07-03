@@ -5,10 +5,18 @@ import { Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Play, RotateCcw, SkipForwardIcon } from "lucide-react-native";
 import ThemeToggle from "@/components/ThemeToggle";
+import { useThemeStore } from "@/store/theme.store";
 
 export default function Home() {
+  const { colors } = useThemeStore();
+
   return (
-    <SafeAreaView className="bg-one flex-1 p-10 pt-0 flex flex-col justify-around items-center">
+    <SafeAreaView
+      className="flex-1 p-10 pt-0 flex flex-col justify-around items-center"
+      style={{
+        backgroundColor: colors,
+      }}
+    >
       <View className="w-full flex items-end">
         <ThemeToggle />
       </View>
