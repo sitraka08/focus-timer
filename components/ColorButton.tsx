@@ -10,7 +10,7 @@ const ColorButton = ({ className, onPress }: ColorButtonProps) => {
   return (
     <TouchableOpacity
       onPress={onPress}
-      className={`w-9 h-9 border-white border-2 rounded-full ${className} border-gray`}
+      className={`w-8 h-8 border-2 rounded-full ${className} border-gray`}
     />
   );
 };

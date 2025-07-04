@@ -6,8 +6,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Play, RotateCcw, SkipForwardIcon } from "lucide-react-native";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useThemeStore } from "@/store/theme.store";
+import { useAudioPlayer } from "expo-audio";
+
+const audioSource = require("@/assets/audio.mp3");
 
 export default function Home() {
+  const player = useAudioPlayer(audioSource);
   const { colors } = useThemeStore();
 
   return (
@@ -27,7 +31,7 @@ export default function Home() {
       <Text className="text-[#D2D8E4] font-flight text-xl text-center">
         Restez concentré, soyez productif
       </Text>
-      <View className="flex flex-row gap-4 justify-between mt-5">
+      <View className="flex flex-row gap-4 justify-between ">
         <Button title="Short" />
         <Button title="Small" />
         <Button title="Long" />
@@ -37,7 +41,13 @@ export default function Home() {
       </View>
       <View className="flex items-center flex-row gap-4">
         <RoundedButton icon={<RotateCcw color="white" />} />
-        <RoundedButton icon={<Play color="white" />} />
+        <RoundedButton
+          icon={<Play color="white" />}
+          onPress={() => {
+            player.seekTo(0);
+            player.play();
+          }}
+        />
         <RoundedButton icon={<SkipForwardIcon color="white" />} />
       </View>
     </SafeAreaView>

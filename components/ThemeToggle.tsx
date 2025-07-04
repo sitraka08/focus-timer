@@ -7,7 +7,7 @@ import { COLORS } from "@/constants/color";
 const ThemeToggle = () => {
   const { setColors } = useThemeStore();
   return (
-    <View className="border border-white flex flex-row gap-4 px-6 py-3 rounded-full bg-[#ffffff3a] justify-evenly w-[260px]">
+    <View className="border border-[#ffffffb0] flex flex-row gap-4 px-6 py-3 rounded-full bg-[#ffffff3a] justify-evenly w-[240px]">
       <ColorButton className="bg-one" onPress={() => setColors(COLORS.one)} />
       <ColorButton className="bg-two" onPress={() => setColors(COLORS.two)} />
       <ColorButton className="bg-five" onPress={() => setColors(COLORS.five)} />
