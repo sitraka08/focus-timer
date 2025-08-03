@@ -6,9 +6,12 @@ interface ButtonProps {
   onPress?: () => void;
 }
 
-const Button = ({ title }: ButtonProps) => {
+const Button = ({ title, onPress }: ButtonProps) => {
   return (
-    <TouchableOpacity className="border border-white w-auto bg-[#fff4] px-8 py-4 rounded-full">
+    <TouchableOpacity
+      onPress={onPress}
+      className="border border-white w-auto bg-[#fff4] px-8 py-4 rounded-full"
+    >
       <Text className="font-fbold text-[#fff]">{title}</Text>
     </TouchableOpacity>
   );
